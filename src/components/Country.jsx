@@ -127,7 +127,7 @@ const Home = () => {
                 </div>
             <div>
                 <h2 className="text-center font-bold md:text-5xl text-3xl mt-[200px] mb-10">Discover All the latest Covid-19 news in {country}</h2>
-                <div className="flex flex-wrap justify-around">
+                <div className="flex flex-wrap justify-around items-center">
                     {articles.slice(0, articleCount).map((article) => (
                         <Article
                             title={article?.title}

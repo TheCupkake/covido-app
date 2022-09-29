@@ -140,7 +140,7 @@ const Home = ({countries,isFetching,isError,}) => {
                     />
                 </div>
             <h2 className="text-center font-bold md:text-5xl text-3xl mt-[200px] mb-10">Discover All the latest news</h2>
-            <div className="flex md:flex-row flex-col flex-wrap justify-around">
+            <div className="flex md:flex-row flex-col flex-wrap justify-around items-center ">
                     {articles.slice(0, articleCount).map((article) => (
                         <Article
                             title={article?.title}
@@ -159,25 +159,25 @@ const Home = ({countries,isFetching,isError,}) => {
             
             <h2 className="text-center font-bold md:text-5xl text-3xl mt-[200px] mb-20">Trends over the past 5 hours worldwide</h2>
 
-            <div className="flex md:flex-row flex-col justify-around w-full md:pl-10">
-                <div className="flex items-center flex-col w-[100%]">
+            <div className="flex md:flex-row flex-col justify-around ">
+                <div className="flex items-center flex-col ">
                 <h3 className="font-bold text-xl">Cases each 15 minutes</h3>
                     <Chart
                         options={options}
                         series={casesSeries}
                         type="line"
                         height="300"
-                        className="md:w-[150%] w-[80%]"
+                        className="md:w-600 w-400"
                         />
                 </div>
-                <div className="flex items-center flex-col w-[100%]">
+                <div className="flex items-center flex-col ">
                     <h3 className="font-bold text-xl ">Deaths each 15 minutes</h3>
                     <Chart
                         options={options}
                         series={deathSeries}
                         type="line"
                         height="300"
-                        className="md:w-[150%] w-[80%]"
+                        className="md:w-600 w-400"
                         />
                 </div>
             </div>
