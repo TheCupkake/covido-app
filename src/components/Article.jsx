@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const Article = ({title, author, summary, link, org, date}) => {
   return (
-    <div className="bg-white m-2 p-5 rounded-lg border-2 border-[#eeeeee] w-[40%] z-400">
+    <div className="bg-white m-2 p-5 rounded-lg border-2 border-[#eeeeee] md:w-[40%] w-[90%] z-400">
         <h1 className="text-center font-bold text-xl mb-2">{title}</h1>
         <hr />
         <p>{summary.slice(0, 200)} <a href={link} target="_blank" className="font-bold cursor-pointer">Read More...</a></p>

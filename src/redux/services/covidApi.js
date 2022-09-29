@@ -13,7 +13,8 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
         endpoints: (builder) => ({
             getAllCountries: builder.query({query: () => '/countries'}),
             getAllStats: builder.query({query: () => '/statistics?country=all'}),
-            getCountryStats: builder.query({query: (country) => `/statistics?country=${country}`})
+            getCountryStats: builder.query({query: (country) => `/statistics?country=${country}`}),
+            getHistoryStats: builder.query({query: (country, date) => `/history?country=${country}`})
         })
     })
 
@@ -21,4 +22,5 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
         useGetAllCountriesQuery,
         useGetAllStatsQuery,
         useGetCountryStatsQuery,
+        useGetHistoryStatsQuery
     } = covidApi
